@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+.wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    padding: 0;
+    max-width: 1200px;
+  }
+}
+
+@import 'components/components.scss';
+@import 'sections/sections.scss';

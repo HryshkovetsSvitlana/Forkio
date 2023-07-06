@@ -1,0 +1,106 @@
+.main {
+  &__title--revolutionary {
+    font-family: $font-Montserrat;
+    text-align: center;
+    font-weight: $montserrat-font-weight-bold;
+    font-size: 54px;
+    color: #635c73;
+    text-transform: uppercase;
+    @include margin-bottom(33px);
+  }
+  &__paragraph {
+    font-family: $font-Lato;
+    text-align: center;
+    font-weight: $lato-font-weight-light;
+    font-size: 21px;
+    @include margin-bottom(35px);
+    color: #323232;
+    line-height: 32px;
+    padding: 0 60px;
+  }
+}
+
+.editor {
+  &__btn-list {
+    @include margin-bottom(70px);
+    @include flex-container;
+  }
+  &__btn-list-item {
+    @include flex-container;
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+  &__btn-block {
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid rgba(27, 31, 35, 0.2);
+  }
+  &__btn-social-count {
+    font-weight: bold;
+    padding: 3px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__title--revolutionary {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .editor {
+    &__btn-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__btn-list-item {
+      flex: 0 0 50%;
+      margin-right: 0;
+      box-sizing: border-box;
+    }
+    &__btn-list-item:nth-child(1) {
+      justify-content: end;
+      padding-right: 4px;
+    }
+    &__btn-list-item:nth-child(2) {
+      justify-content: start;
+      padding-left: 4px;
+    }
+    &__btn-list-item:nth-child(3) {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  .main {
+    &__title--revolutionary {
+      font-size: 26px;
+    }
+    &__paragraph {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.editor__btn-actions:link,
+.editor__btn-actions:visited,
+.editor__btn-social-count:link,
+.editor__btn-social-count:visited {
+  @include flex-container;
+  @include button-styles;
+}
+
+.editor__btn-actions {
+  border-right: 1px solid rgba(27, 31, 35, 0.2);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fafbfc),
+    color-stop(90%, #eff3f6)
+  );
+  user-select: none;
+}
+.editor__btn-actions-img {
+  margin-right: 3px;
+}

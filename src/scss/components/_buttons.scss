@@ -1,0 +1,37 @@
+.header-button{
+  border-radius: 40px;
+  background: $main-color;
+  border: none;
+  color: $color-white;
+  text-align: center;
+  font-family: $font-Montserrat;
+  font-weight: $montserrat-font-weight-bold;
+  cursor: pointer;
+  transition: all ease 0.5s;
+
+  &:hover {
+    border: 1px solid $main-color;
+    background: $color-white;
+    color: $main-color;
+  }
+}
+
+.buy-now-button {
+  width: 119px;
+  height: 37px;
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.download-button {
+  width: 290px;
+  height: 45px;
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 20px;
+
+  position: absolute;
+  bottom: -22px;
+  left: calc(50% - 145px);
+}

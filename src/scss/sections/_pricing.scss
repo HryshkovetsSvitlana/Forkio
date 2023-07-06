@@ -1,0 +1,92 @@
+.pricing {
+  background-image: url(/dist/img/pricing-section/pricing-bg.png);
+  background-size: cover;
+  &__wrapper {
+    padding-top: 83px;
+    padding-bottom: 97px;
+    text-align: center;
+    @include flex-container(column, center, center);
+  }
+
+  &__title {
+    font-family: $font-Montserrat;
+    height: 46px;
+    text-align: center;
+    font-weight: $montserrat-font-weight-bold;
+    font-size: 48px;
+    color: $white-text;
+    @include margin-bottom(61px);
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+.thickness {
+  font-weight: lighter;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .pricing {
+    &__wrapper {
+      padding-top: 90px;
+      padding-bottom: 94px;
+    }
+    &__title {
+      font-size: 42px;
+      @include margin-bottom(39px);
+    }
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__content-block {
+      @include margin-bottom(71px);
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 25px;
+      }
+      &--active {
+        transform-origin: right;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .pricing {
+    &__wrapper {
+      padding-top: 63px;
+    }
+    &__title {
+      font-size: 33px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .pricing {
+    &__wrapper {
+      padding-top: 32px;
+      padding-bottom: 80px;
+    }
+    &__title {
+      font-size: 28px;
+      @include margin-bottom(32px);
+    }
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__content-block {
+      @include margin-bottom(18px);
+
+      &--active {
+        transform-origin: center;
+        margin-top: 18px;
+        @include margin-bottom(36px);
+      }
+    }
+  }
+}
